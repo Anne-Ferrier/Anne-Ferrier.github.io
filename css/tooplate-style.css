@@ -227,7 +227,7 @@ p {
 =======================*/
 
 .fivth-section {
-	background-image: url(../img/fivth-section-bg.png);
+	background-image: url(../img/first-page-bg.jpg);
 	background-size: cover;
 	width: 100%;
 	background-repeat: no-repeat;
@@ -261,6 +261,28 @@ p {
 	font-size: 24px;
 	font-weight: 700;
 	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.fivth-section .text-content h2 {
+	font-size: 44px;
+	color: #fff;
+	font-weight: 900;
+	letter-spacing: 1px;
+}
+
+.fivth-section .text-content .line-dec {
+	width: 60px;
+	height: 3px;
+	background-color: #fff;
+	margin: 25px 0px 25px auto;
+}
+
+.fivth-section .text-content span {
+	font-size: 18px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 300;
 	letter-spacing: 1px;
 }
 
@@ -364,6 +386,7 @@ p {
 	border: 1px solid #415b90;
 	font-size: 18px;
 }
+
 
 /* ======================
 ----- FOOTER SECTION ----

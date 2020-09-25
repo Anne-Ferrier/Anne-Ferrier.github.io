@@ -24,20 +24,60 @@ http://www.tooplate.com/view/2091-ziggy
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="css/fontAwesome.css">
         <link rel="stylesheet" href="css/tooplate-style.css">
+        <link rel="stylesheet" href="css/colorbox.css">
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+        <script src="jquery.colorbox.js"></script>
+        <script>
+			$(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+				$(".group1").colorbox({rel:'group1'});
+				$(".group2").colorbox({rel:'group2', transition:"fade"});
+				$(".group3").colorbox({rel:'group3', transition:"none", width:"75%", height:"75%"});
+				$(".group4").colorbox({rel:'group4', slideshow:true});
+				$(".ajax").colorbox();
+				$(".youtube").colorbox({iframe:true, innerWidth:640, innerHeight:390});
+				$(".vimeo").colorbox({iframe:true, innerWidth:500, innerHeight:409});
+				$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+				$(".inline").colorbox({inline:true, width:"100%", height:"80%", close:true, scrolling:false});
+				$(".callbacks").colorbox({
+					onOpen:function(){ alert('onOpen: colorbox is about to open'); },
+					onLoad:function(){ alert('onLoad: colorbox has started to load the targeted content'); },
+					onComplete:function(){ alert('onComplete: colorbox has displayed the loaded content'); },
+					onCleanup:function(){ alert('onCleanup: colorbox has begun the close process'); },
+					onClosed:function(){ alert('onClosed: colorbox has completely closed'); }
+				});
+
+				$('.non-retina').colorbox({rel:'group5', transition:'none'})
+				$('.retina').colorbox({rel:'group5', transition:'none', retinaImage:true, retinaUrl:true});
+				
+				//Example of preserving a JavaScript event for inline calls.
+				$("#click").click(function(){ 
+					$('#click').css({"background-color":"#f00", "color":"#fff", "cursor":"inherit"}).text("Open this window again and this message will still be here.");
+					return false;
+				});
+			});
+		</script>
     </head>
     <body>
         
-
-        <section class="first-section">
+		<section class="fivth-section">
           <div class="container">
             <div class="row">
-              <div class="col-md-12">
-                <div class="text-content">
-                  <h2>Anne FERRIER</h2>
-                  <div class="line-dec"></div>
-                  <span>Ingénieure en développement Unity</span>
+              <div class="col-md-10 col-md-offset-1"> 
+                <div class="left-text col-md-8">
+                  <div class="text-content">
+                  	<h2>Anne FERRIER</h2>
+                  	<div class="line-dec"></div>
+                  	<span>Ingénieure en développement Unity</span>
+                  	<p>Jeune diplômée d'un Master en Image et 3D, je suis passionnée de nouvelles technologies et de réalité virtuelle et cherche à explorer le monde tant réel que virtuel. <br>
+                  	Je suis à la recherche d'une entreprise qui saura reconnaître la valeur d'une jeune diplomée pleine de ressources et prête à se consacrer à 100% pour évoluer avec elle.
+                  	</p>
+                  </div> 
+                </div>
+                <div class="right-image col-md-4">
+                  <img src="img/profil-picture.png" alt="">
                 </div>
               </div>
             </div>
@@ -47,34 +87,25 @@ http://www.tooplate.com/view/2091-ziggy
         <section class="second-section">
           <div class="container">
             <div class="row">
-              <div class="col-md-3 col-sm-6">
-                <div class="service-item">
-                  <div class="icon">
-                    <img src="img/first-icon.png" alt="">
-                  </div>
-                  <h4>Quick Editing</h4>
-                  <p>Aliquam ex velit, viverra eu tristique vel, rhoncus nec ligula. In vel massa sed dolor pharetra interdum vitae posuere.</p>
-                </div>
-              </div>
-              <div class="col-md-3 col-sm-6">
+              <div class="col-md-4 col-sm-6">
                 <div class="service-item">
                   <div class="icon">
                     <img src="img/second-icon.png" alt="">
                   </div>
-                  <h4>Responsive Layout</h4>
-                  <p>Sed pulvinar ipsum id leo volutpat, in convallis lectus molestie. Aliquam nisi sapien, faucibus eu consequat id, egestas vitae augue.</p>
+                  <h4>Formation</h4>
+                  <p>Après une Licence en informatique qui m'a permis d'aquérir les fondements théoriques et les compétences pratiques de base en informatique, je me suis spécialisée en Image et 3D avec le Master du même nom à l'Université de Strasbourg.</p>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-6">
+              <div class="col-md-4 col-sm-6">
                 <div class="service-item">
                   <div class="icon">
                     <img src="img/third-icon.png" alt="">
                   </div>
-                  <h4>Quick Support</h4>
-                  <p>Aliquam ex velit, viverra eu tristique vel, rhoncus nec ligula. In vel massa sed dolor pharetra interdum vitae posuere.</p>
+                  <h4>Compétences</h4>
+                  <p>Au cours de ma formation, de mes stages et de projets personnels, j'ai développé mes compétences en développement 3D, et en réalité virtuelle, avec notamment le moteur de jeu Unity, le casque HTC Vive, ainsi que les bases en modélisation 3D à l'aide de Blender.</p>
                 </div>
               </div>
-              <div class="col-md-3 col-sm-6">
+              <div class="col-md-4 col-sm-6">
                 <div class="service-item">
                   <div class="icon">
                     <img src="img/fourth-icon.png" alt="">
@@ -87,20 +118,113 @@ http://www.tooplate.com/view/2091-ziggy
           </div>
         </section>
 
-        <section class="third-section">
+		<section class="first-gallery-section">
           <div class="container">
             <div class="row">
-              <div class="col-md-10 col-md-offset-1">
-                <div class="left-image col-md-4">
-                  <img src="img/left-image.png" alt="">
-                </div>
-                <div class="right-text col-md-8">
-                  <h4><em>Integer suscipit</em><br>Nullam volutpat mi vel</h4>
-                  <p>Nulla tempor lectus at mauris bibendum porttitor. Aenean ultrices orci id nibh sodales, vel suscipit arcu vulputate. Pellentesque hendrerit diam quis leo dignissim, lacinia interdum nunc volutpat. Morbi lobortis mattis lectus, a dictum augue lobortis non. Fusce eu nulla sagittis, scelerisque eros fringilla, commodo dolor.</p>
+              <div class="col-md-12">
+                <div class="text-content">
+                  <h2>Projets</h2>
+                  <div class="line-dec"></div>
+                  <span>A propos de mes projets personnels et professionnels</span>
                 </div>
               </div>
             </div>
           </div>
+        </section>
+
+        <section class="portfolio-section">
+        	<div class="content-wrapper">
+            <div class="inner-container container">
+                <div class="projects-holder-3">
+                    <div class="filter-categories">
+                        <ul class="project-filter">
+                            <li class="filter" data-filter="all"><span>All</span></li>
+                            <li class="filter" data-filter="industrie"><span>Industrie 4.0</span></li>
+                            <li class="filter" data-filter="nature"><span>Nature</span></li>
+                            <li class="filter" data-filter="responsive"><span>Responsive</span></li>
+                            <li class="filter" data-filter="creative"><span>Creative</span></li>
+                        </ul>
+                    </div>
+                    <div class="projects-holder">
+                        <div class="row">
+                            <div class="col-md-4 col-sm-6 project-item mix industrie">
+                              <div class="image">
+                                <a class='inline' href="#inline_content_project1"><img src="img/mannequins-item.png"></a>
+                              </div>
+                              <div class="text">
+                                <span>Industrie 4.0</span>
+                                <h4>Projet VirWorks</h4>
+                              </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 project-item mix webdesign">
+                              <div class="image">
+                                <video id="video1" style="display:none" src="videos/Visite_usine_RV.mp4"/>
+                                <a data-lightbox="image-1"> <img onclick="document.getElementById('video1').style.display='block';" src="img/02-item.jpg"/></a>
+                              </div>
+                              <div class="text">
+                                <span>Web Design</span>
+                                <h4>Rock Solid</h4>
+                              </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 project-item mix responsive">
+                              <div class="image">
+                                <a href="img/03-big-item.jpg" data-lightbox="image-1"><img src="img/03-item.jpg"></a>
+                              </div>
+                              <div class="text">
+                                <span>Responsive</span>
+                                <h4>Minimal Capture</h4>
+                              </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 project-item mix creative nature">
+                              <div class="image">
+                                <a href="img/04-big-item.jpg" data-lightbox="image-1"><img src="img/04-item.jpg"></a>
+                              </div>
+                              <div class="text">
+                                <span>Creative / Nature</span>
+                                <h4>Tattoo Lovers</h4>
+                              </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 project-item mix creative">
+                              <div class="image">
+                                <a href="img/05-big-item.jpg" data-lightbox="image-1"><img src="img/05-item.jpg"></a>
+                              </div>
+                              <div class="text">
+                                <span>Creative</span>
+                                <h4>Develope &amp; Coding</h4>
+                              </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 project-item mix responsive webdesign">
+                              <div class="image">
+                                <a href="img/06-big-item.jpg" data-lightbox="image-1"><img src="img/06-item.jpg"></a>
+                              </div>
+                              <div class="text">
+                                <span>Responsive / Web Design</span>
+                                <h4>Network Inspire</h4>
+                              </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 project-item mix webdesign">
+                              <div class="image">
+                                <a href="img/07-big-item.jpg" data-lightbox="image-1"><img src="img/07-item.jpg"></a>
+                              </div>
+                              <div class="text">
+                                <span>Web Design</span>
+                                <h4>Start From Scatch</h4>
+                              </div>
+                            </div>
+                            <div class="col-md-4 col-sm-6 project-item mix nature">
+                              <div class="image">
+                                <a href="img/08-big-item.jpg" data-lightbox="image-1"><img src="img/08-item.jpg"></a>
+                              </div>
+                              <div class="text">
+                                <span>Nature</span>
+                                <h4>Stay Safe Watch</h4>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         </section>
 
         <section class="fourth-section">
@@ -109,11 +233,11 @@ http://www.tooplate.com/view/2091-ziggy
               <div class="col-md-3 col-sm-6">
                 <div class="portfolio-item first-item">
                   <div class="image">
-                    <a href="img/01-big-item.jpg" data-lightbox="image-1"><img src="img/first-item.jpg"></a>
+                    <a href="img/mannequins-big-item.png" data-lightbox="image-1"><img src="img/mannequins-item.png"></a>
                   </div>
                   <div class="text">
-                    <span>Nature</span>
-                    <h4>Robotic Light</h4>
+                    <span>Industrie 4.0</span>
+                    <h4>Projet VirWorks</h4>
                   </div>
                 </div>
               </div>
@@ -141,9 +265,9 @@ http://www.tooplate.com/view/2091-ziggy
               </div>
               <div class="col-md-3 col-sm-6">
                 <div class="send-to-portfolio">
-                  <span>Do you want to see more?</span>
+                  <span>Vous voulez en savoir plus ?</span>
                   <div class="primary-button">
-                    <a href="portfolio-page.html">Visit gallery</a>
+                    <a href="#portfolio-section">Voir les projets</a>
                   </div>
                 </div>
               </div>
@@ -151,16 +275,32 @@ http://www.tooplate.com/view/2091-ziggy
           </div>
         </section>
 
-        <section class="fivth-section">
+        <section class="first-section">
           <div class="container">
             <div class="row">
-              <div class="col-md-10 col-md-offset-1"> 
-                <div class="left-text col-md-8">
-                  <h4><em>Aliquam efficitur</em><br>augue et libero vulputate feugiat</h4>
-                  <p>Mauris eget orci porta, aliquam neque sit amet, porttitor dui. Donec efficitur vehicula justo quis varius. Vivamus pharetra lorem eget turpis ornare tempus. Vivamus ac sodales lectus. Morbi rhoncus feugiat neque ultrices rhoncus. Maecenas ultrices, nisl pellentesque hendrerit dignissim, ante purus hendrerit urna, eu tristique est massa quis risus.</p>
+              <div class="col-md-12">
+                <div class="text-content">
+                  <h2>Anne FERRIER</h2>
+                  <div class="line-dec"></div>
+                  <span>Ingénieure en développement Unity</span>
                 </div>
-                <div class="right-image col-md-4">
-                  <img src="img/right-image.png" alt="">
+              </div>
+            </div>
+          </div>
+        </section>
+
+        
+
+        <section class="third-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div class="left-image col-md-4">
+                  <img src="img/left-image.png" alt="">
+                </div>
+                <div class="right-text col-md-8">
+                  <h4><em>Integer suscipit</em><br>Nullam volutpat mi vel</h4>
+                  <p>Nulla tempor lectus at mauris bibendum porttitor. Aenean ultrices orci id nibh sodales, vel suscipit arcu vulputate. Pellentesque hendrerit diam quis leo dignissim, lacinia interdum nunc volutpat. Morbi lobortis mattis lectus, a dictum augue lobortis non. Fusce eu nulla sagittis, scelerisque eros fringilla, commodo dolor.</p>
                 </div>
               </div>
             </div>
@@ -209,16 +349,45 @@ http://www.tooplate.com/view/2091-ziggy
           </div>
         </section>
 
+        <!-- This contains the hidden content for inline calls -->
+        <section class="inline-section">
+        	<div style='display:none'>
+			<div id='inline_content_project1' style='padding:30px; background:url(img/inline-bg.jpg); background-size: cover;'>
+				<div class="container" style='text-align: center'>
+            		<div class="row" >
+            			<div class="text-content" style='font-size: 44px; color: #fff; font-weight: 900; letter-spacing: 1px;'>
+            				<h2> Projet VirWorks </h2>
+            			</div>    
+            			<div class="line-dec" style='width: 100px;height: 3px;background-color: #fff;margin-left: auto; margin-right: auto; margin-top: 25px; margin-bottom: 25px'></div>      			
+              			<div class="col-md-4" >
+
+							<p style='color: #fff'>Le projet VirWorks a pour but de blabla</p>
+              				<p style='color: #fff'>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+              				<p style='color: #fff'>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+              				<p style='color: #fff'>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
+							<p><a id="click" href="#" style='padding:5px; background:#ccc;'>Click me, it will be preserved!</a></p>
+              			</div>
+              			<div class="col-md-5 col-md-offset-1">
+                			<video controls width="150%">
+			  					<source src="videos/RV_virworks.mp4" type="video/mp4">
+			  					<p>Votre navigateur ne prend pas en charge les vidéos HTML5.</p>
+							</video>
+              			</div>
+            		</div>
+          		</div>
+			</div>
+		</div>
+        </section>
+		
+
         <footer>
           <div class="container">
             <div class="row">
               <div class="col-md-12">
                 <ul>
-                  <li><a href="https://www.facebook.com/tooplate"><i class="fa fa-facebook"></i></a></li>
-                  <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                  <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                  <li><a href="https://www.linkedin.com/in/anne-ferrier/"><i class="fa fa-linkedin"></i></a></li>
+                  <!--<li><a href="#"><i class="fa fa-rss"></i></a></li> 
+                  <li><a href="#"><i class="fa fa-dribbble"></i></a></li> -->
                 </ul>
                 <p>Copyright &copy; 2017 Company Name 
                         
@@ -228,7 +397,6 @@ http://www.tooplate.com/view/2091-ziggy
           </div>
         </footer>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 
         <script src="js/vendor/bootstrap.min.js"></script>
