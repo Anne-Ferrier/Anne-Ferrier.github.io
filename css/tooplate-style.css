@@ -111,7 +111,7 @@ p {
 	background-size: cover;
 	width: 100%;
 	background-repeat: no-repeat;
-	padding: 20% 0px;
+	padding: 15%;
 }
 
 .third-section .left-image img {
@@ -131,10 +131,10 @@ p {
 }
 
 .third-section h4 {
-	margin-top: 60px;
+	margin-top: 19%;
 	color: #fff;
-	font-size: 24px;
-	font-weight: 700;
+	font-size: 30px;
+	font-weight: 800;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 }
@@ -301,7 +301,7 @@ p {
 	background-size: cover;
 	width: 100%;
 	background-repeat: no-repeat;
-	padding: 10% 0px;
+	padding: 5% 0 20% 0px;
 }
 
 .sixth-section input {
@@ -457,7 +457,7 @@ footer a:hover {
 ======================*/
 
 .first-gallery-section {
-	background-image: url(../img/heading-bg.png);
+	background-image: url(../img/project-bg.jpg);
 	background-size: cover;
 	width: 100%;
 	background-repeat: no-repeat;
