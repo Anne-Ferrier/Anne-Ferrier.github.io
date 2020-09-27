@@ -26,6 +26,12 @@ p {
 	line-height: 22px;
 }
 
+li {
+	font-size: 13px;
+	color: #7a7a7a;
+	line-height: 22px;
+}
+
 .primary-button a {
 	text-decoration: none;
 	padding: 10px 18px;
@@ -363,7 +369,7 @@ p {
 
 .sixth-section .right-info ul li {
 	display: block;
-	font-size: 13px;
+	font-size: 20px;
 	font-weight: 700;
 	color: #415b90;
 	margin-bottom: 20px;
@@ -376,15 +382,16 @@ p {
 
 .sixth-section .right-info ul li i {
 	margin-right: 15px;
+	margin-top: 40px;
 	display: inline-block;
-	width: 46px;
-	height: 46px;
-	line-height: 46px;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
 	text-align: center;
 	color: #415b90;
 	border-radius: 50%;
 	border: 1px solid #415b90;
-	font-size: 18px;
+	font-size: 27px;
 }
 
 
